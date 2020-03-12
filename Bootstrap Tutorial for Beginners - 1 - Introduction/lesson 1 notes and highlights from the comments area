@@ -1,0 +1,134 @@
+Bootstrap is a framework development environment to create cross device websites.
+It will make these websites interchangeably to look good, for varying sizes of displays, from small cell phones to
+large screen monitors.  This ability makes bootstrap very popular.
+
+The Bootstrap software can be obtained from:
+
+https://getbootstrap.com/
+
+The end user can click the "Download" button extract  the three files, and put them in every
+directory page that uses bootstrap, or use a CDN (content delivery network), to use the files from a remote server, and
+put those, on the top of every page that uses Bootstrap.  I will do both here, but comment out
+the CDV, for learning purposes, but to keep the CDN and local files from conflicting.
+
+The three folders, in the download, to include in all bootstrap pages:
+
+css
+fonts
+js
+
+The other method using the newest, Feb. 2020, version of bootstrap CDN:
+
+CSS only:
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+JS, Popper.js, and jQuery:
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+The template, for index.html, contents, can be found here:
+
+https://github.com/buckyroberts/Source-Code-from-Tutorials/blob/master/Bootstrap/001_template.html
+
+We will now explain the CDNs line by line:
+
+The viewport, in this first CDN, is essentially the viewer screen, the 'width' is the width of the screen and
+'initial-scale'means do not zoom in or out in any special way; use regular zoom in every device:
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+The next on is where we get all the CSS default; styling, coloring and look of all the different widgets:
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+And the two script CDN's one is for the standard jquery library and the other for the javascript bootstrap file
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+The <body> HERE </body>, will be the starting point for every boostrap page we make.
+
+We will now start designing the website.  Almost everything within a website has to go in a container.  There are
+two types of containers to choose from, for the 'class':
+
+'container'      # a fixed size screen, container
+'conainer-fluid' # full size scree, container
+
+In the index.htm we will begin by setting up the container:
+
+ <!--  set up the container size, heading a paragraph text-->
+    <div class=" container">
+        <h1>Welcome to Roddy's</h1>
+        <p>We love theNewBoston, my name is Roddy</p>
+
+    </div>
+
+Then we will run this in PyCharm and view it on our browser.
+
+
+
+****************** highlights from the comments area **********************
+
+
+
+Bucky please don't give people bad advice. Including bootstrap links from some random 3rd party website instead of
+having inside your project is a BAD PRACTICE. Any real programmer with at least 1 year exp will completely agree with me.
+Bucky you should have said something like "In this tutorial we will be using links but in reality always download
+bootstrap"
+
+
+
+
+
+Biiiip, wrong: A CDN is NOT, just a server, but a whole NETWORK of them, working together with specially designed
+algorithms, in order to provide High Fault Tolerance: It ensires the CONTENT DELIVERY. ;) use google, it's new, you type
+words, hit enter, and then...
+
+He was talking about it at a higher level, it's not a networking tutorial
+
+I was just completing, then. Which is pretty much of a very impotant point: Take any developer, it is not good, if not
+catastrophic, uif that developer has no clue how his developed features are packaged for production. And why. It feel
+it especially is true in the context: any person watching the video, willing to work in front web dev, has to hear about
+the packaging, eg, how do you work/test while you work with sass / less . css ? All in all, the CDN stuff is a
+dependency of the front web developer's work. As such, it i, I think, a most important thing for him to be curious
+about it.
+
+Indeed a CDN is specifically implemented with servers ideally spread around the world. The purpose is to keep multiple
+caches of often reused files & route the traffic to the closest server thus minimizing latency. Familiarity with CDN's
+doesn't magically impart knowledge of Bootstrap or any other of the 10,001 web frameworks out there so this is still a
+worthwhile view to anyone.
+
+One more worth to mention, , very much so, I believe, characteristics of today's CDN service  offer: What Mr. Sticky ...
+is that there is some caching alon,g the routing. Well, today's CDN offers propose you this : Your web site stays on
+line, ... EVenn if your provider shut down your server!...
+See?
+
+
+
+
+So, basically a bootstrap is something like a theme; a prepared css, js and fonts and i just need to copy/pasta that to
+my folder and no need to install? then i just need to add a valid class names in my htmls to manipulate its content?
+
+
+
+
+Pasting the CDN  link need internet access. I think downloading bootstrap is better choice for testing purpose
+
+
+
+
+Pre requisites to learn bootstrap ???
+
+html5 and css3 ,hope that clarifies
+
+
+
+
+
+
+
+
+
