@@ -1,0 +1,41 @@
+In this lesson we will be designing layouts, in Bootstrap, using the grid system.  In Bootstrap we can have a
+maximum, of 12 columns.  We can group all 12 columns into 1, if we only want 1 column.  For example if we want a side
+bar, we could group 2 columns together and use the other 10 for Text space.
+The grid system in Bootstrap has 4 different classes, which relate to the different device you are designing it for:
+
+xs  extra small, for phones
+sm  small, for tablets
+md  medium, for desktops and laptops
+lg  large, for I-macs and other large screens.
+
+We can use these classes to specify how many columns for which type of device, for example;
+for a laptop you want 2 columns and for a phone you may want only 1, depending on what device is used
+We will be using, one size fits all (md), that is responsive to all devices, in this tutorial.
+We will start, in index.py, and make a simple web page that uses 3 columns and takes up the entire width of the screen.
+Instead of 'container' we will us 'container-fluid':
+
+    <--  allows, to take up entire width of the screen -->
+    <div class=" container-fluid">
+
+        <-- our header -->
+        <h1>3 column layout</h1>
+
+To have columns you have to have rows and in this row we will have 3 columns.  To make 3 columns out of 12 possible, we
+will have 4 bundled together for each row, in class column, with medium for size:
+
+        <div class='row'>
+
+            <!-- regular column spanning for columns, with background color, text 'First' -->
+            <div class='col-md-4'>style="background-color: #FF9999">Left</div>
+            <div class='col-md-4'>style="background-color: #555555">Middle</div>
+            <div class='col-md-4'>style="background-color: #007777">Right</div>
+
+        </div>
+
+If the window is re-sized, the columns will be converted, on the fly, to piled rows, which would be easier to view on a
+small device such as a cell phone.  If we used a regular container the column span would not span the entire width of
+the screen, and would have a set span width, with the screen blank on either side.
+
+
+
+************** No useful comments in the comments area *************
