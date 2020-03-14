@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>thenewboston</title>
+    <meta charset="utf-8">
+
+    <!-- L3 using CDN bootstrap files and downloaded Bootstrap in case there is no CDN available-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <br>
+        <!--highlight text <mark>  </mark>-->
+        <p>you can <mark>highlight words</mark> or text using the mark tags</p>
+
+        <!--<blockquote> <p>text in tags like between</p> then <footer> with the authors name</footer></blockquote>-->
+        <blockquote>
+            <p>This is where the quote goes</p>
+            <footer>Authors Name</footer>
+        </blockquote>
+
+        <h4>This is how you make a list</h4>
+
+        <!--The list container-->
+        <dl>
+            <!--list title-->
+            <dt>Indoors</dt>
+
+                <!--the list items-->
+                <dd>sleep</dd>
+                <dd>watch TV</dd>
+                <dd>eat</dd>
+
+            <dt>Outdoors</dt>
+
+                <dd>go inside</dd>
+                <dd>drink</dd>
+        </dl>
+
+
+        <!--Use <code> tags to highlight single line code-->
+        <p>Highlight the <code>sourceCode(self)</code>then return to normal text</p>
+
+        <!--use the pre-formatted tag <pre>, for multiline blocks of code -->
+        <p>use 'pre' for multiline blocks of code
+        <pre>
+
+num = float(input("Enter a number: "))
+if num >= 0:
+    if num == 0:
+        print("Zero")
+    else:
+        print("Positive number")
+else:
+    print("Negative number")
+
+        </pre>code ended</p>
+
+        <!--for instructions involving pressing certain keyboard keys use <kbd>-->
+        <p>This is for keyboard combination press <kbd>Ctrl+Alt+Del</kbd></p>
+
+        <!--classes of contextual colors for forms-->
+        <h4>Built-in contextual colors</h4>
+
+        <!--for non-clickable text use class='text-muted' 'grey'-->
+        <p class ='text-muted'>Text Muted; color is grey</p>
+
+        <!--use class ='text-success', for forms filled out correctly; color is green-->
+        <p class ='text-success'>form filled out correctly; color is green</p>
+
+        <!--use class ='text-danger' if form filled out incorrectly; color is red -->
+        <p class ='text-danger'>Text is wrong danger; color is red</p>
+
+        <!--background contextual color classes; bg- instead of text- -->
+
+        <!--use class ='bg-success', for forms filled out correctly; color is green-->
+        <p class ='bg-success'>form filled out correctly; color is green</p>
+
+        <!--use class ='bg-danger' if form filled out incorrectly; color is red -->
+        <p class ='bg-danger'>Text is wrong danger; color is red</p>
+
+        <!--From comments area keyboard example-->
+        <p>From comments area This is supposed to be keyboard input <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>.</p>
+    </div>
+
+</body>
+</html>

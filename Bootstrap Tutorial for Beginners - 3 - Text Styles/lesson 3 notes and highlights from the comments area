@@ -1,0 +1,210 @@
+This lesson will show some of the text styling defaults built into Bootstrap. First we will use
+the highlight <mark> tags, to highlight words or text:
+
+        <!--highlight text <mark>  </mark>-->
+        <p>you can <mark>highlight words</mark> or text using the mark tags</p>
+
+You use <blockquote> to make quotes, within the blockquote we use <p> for the quote and <footer> for the author of the
+quote.  This will give the text proper spacing and use different text to enhance the style:
+
+        <!--<blockquote> <p>text in tags like between</p> then <footer> with the authors name</footer></blockquote>-->
+        <blockquote>
+            <p>This is where the quote goes</p>
+            <footer>Authors Name</footer>
+        </blockquote>
+
+************************************************************************************************************************
+   In this lesson we began using the older version, CDN links, instead of the downloaded bootstrap files, because the
+   style of the blockqoute was more pronounced.  We kept the downloaded Bootstrap files in the main directory, in case
+   there is no access, or failure, to the CDN links.
+************************************************************************************************************************
+
+Next we will make a list using <dl> and <dt> and <dd> tags.  First we use <h4> to make a heading.  <dl> is the main
+container for the list <dt> is for the list topics and <dd> is for the list items:
+
+        <h4>This is how you make a list</h4>
+
+        <!--The list container-->
+        <dl>
+            <!--list title-->
+            <dt>Indoors</dt>
+
+                <!--the list items-->
+                <dd>sleep</dd>
+                <dd>watch TV</dd>
+                <dd>eat</dd>
+
+            <dt>Outdoors</dt>
+
+                <dd>go inside</dd>
+                <dd>drink</dd>
+        </dl>
+
+This is how you make syntax highlighting for documentation code for an API or coding site like, github.  It is styled to
+let the viewer know, that it is special 'documentation', for instance source code.  We use <code> to perform this
+syntax highlighting for single lines.
+
+        <!--Use <code> tags to highlight single line snippets of code-->
+        <p>Highlight the <code>sourceCode(self)</code>then return to normal text</p>
+
+
+
+        <!--use the pre-formatted tag, for multiline blocks of code -->
+        <p>use pre for multiline blocks of code
+        <pre>
+
+        num = float(input("Enter a number: "))
+        if num >= 0:
+            if num == 0:
+                print("Zero")
+            else:
+                print("Positive number")
+        else:
+            print("Negative number")
+
+        </pre>code ended</p>
+
+If you want the <pre> code to be more to the left or right, align it accordingly, in Pycharm using tab to go
+right and shift+tab to go left, after selecting the block of code you want to move.
+
+Next, if you are giving someone a lesson that involves pushing down keyboard keys, use the <key> tag,
+to make them stick out.
+
+        <!--for instructions involving pressing certain keyboard keys use <kbd>-->
+        <p>This is for keyboard combination press <kbd>Ctrl+Alt+Del</kbd></p>
+
+
+We use contextual colors, for forms and other online items, the user may have to fill out, to show errors, for instance,
+red, and green for correct entries:
+
+        <!--classes of contextual colors for forms-->
+        <h4>Built-in contextual colors</h4>
+
+        <!--for non-clickable text use class='text-muted' 'grey'-->
+        <p class ='text-muted'>Text Muted; color is grey</p>
+
+        <!--use class ='text-success', for forms filled out correctly; color is green-->
+        <p class ='text-success'>form filled out correctly; color is green</p>
+
+        <!--use class ='text-danger' if form filled out incorrectly; color is red -->
+        <p class ='text-danger'>Text is wrong danger; color is red</p>
+
+These Bootstrap contextual color classes enable coloration of text, without using custom CSS classes, and are the same for
+background colors.
+
+        <!--use class ='bg-success', for forms filled out correctly; color is green-->
+        <p class ='bg-success'>form filled out correctly; color is green</p>
+
+        <!--use class ='bg-danger' if form filled out incorrectly; color is red -->
+        <p class ='bg-danger'>Text is wrong danger; color is red</p>
+
+These text styles are know as 'topography'.
+
+
+
+
+*************** highlights from the comments area ****************
+
+
+
+Hey Bucky, I'm using bootstrap and am also copying those files/text that are required, you know the ones provided in
+their website in the start. Also,  have downloaded bootstrap and have copied the css, js, fonts packages in my project
+BUT, the page that I design, it does not look the way it should. I have used their example pages and their source code
+but my page looks just different and not like the ones that they have designed. Could you or anyone  else please help
+or suggest something.
+
+Try it in Chrome or Firefox. Sometimes, it doesn't display well in IE or Edge
+
+yeah I've been using it on Chrome. well that is not working I don't know why.:(
+
+I was using the downloaded updated 2020 Bootstrap version,  and the rendering in the browser, was different than the
+examples in the video.  I left the downloaded files, in the main directory, and switched to the older CDN files links,
+Bucky supplied, and then the rendering in the browser matched the tutorial, in google chrome.
+
+
+
+
+There are some things not working for me:
+1. the <blockquote> element isn't displaying the line on the left and even the background colour hasn't changed for me.
+2. The text written in <pre>tag isn't being displayed inside the box as is shown in this video.
+3. The "bg-success" and "bg-danger" aren't working as well. I'm getting just plain white text.
+
+Can somebody please help me out here ?
+
+Guessing bootstrap has changed since this video came out :/
+
+Try an older version of CDN Bootstrap.
+
+
+
+
+
+Blockquoute doesn't work. Try
+<blockquoute class=blockquoute">
+<p>Text goes here like grandpa bed wetting</p>
+
+<footer class="blockquoute-footer"> From Bucky </footer>
+</blockquoute>
+
+I was just wondering why isn't it working? Different version of bootstrap or something? It works with the classes you
+provided, thanks for that 😀
+
+
+<blockquote class="blockquote">
+  <p class="mb-0">i wet the bed.</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+
+
+
+
+
+
+Try using the <small> tag if <footer> doesn't work.
+
+
+
+
+
+How come for me this code returns everything in seperate rows.
+
+<div class="row">
+            <div class="col-md-4" style="background-color: #FF9999">Left</div>
+            <div class="col-md-4" style="background-color: #99CCFF">Middle</div>
+            <div class="col-md-4" style="background-color: #00CC99">Right</div>
+        </div>
+
+also container and container-fluid returns the full screen width. is this a browser issue ?
+
+never mind i figured it out .. the CDN page referencing to stylesheet was blocked.
+
+
+
+
+
+
+<blockquote> isn't working :(
+
+
+Same! I'm following along and it doesn't work for me either. Looks like a pretty cool feature.
+
+Check the bootstrap version you're using. If you're using bootstrap 4, the syntax is a bit different:
+<blockquote class="blockquote">
+     <p> Text here </p>
+     <footer class="blockquote-footer"> Anonymous</footer>
+    </blockquote>
+
+
+<blockquote class="blockquote">
+  <p class="mb-0">i wet the bed</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+
+
+
+
+
+
+
+I think they intended it to work this way (keyboard):
+<p>This is supposed to be keyboard input <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>.</p>
