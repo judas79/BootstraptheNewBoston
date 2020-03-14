@@ -1,0 +1,110 @@
+This lesson is about tables.  There are a bunch of different tables you can have, but first we will be concentrating on
+simple table, condensed table and a striped table.  When creating a, simple table, or all tables, first you have to set
+the generic class to, table, within the <table> tags.  Within the 'simple' <table> tag, there are many rows, in which we
+will set up our columns.  We will also be splitting our rows into a <head> and <body>.  The <head> will be useful for
+providing a label for the titles of what is contained in the <body> of data.  In the <head> is also where we will be
+creating the rows; <tr>.  Within the rows <tr> we will make the headers <th> for our rows and supply a name for them:
+
+        <h2>simple table</h2>
+        <table class = 'table'>
+            <head>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Points</th>
+
+                </tr>
+
+            </head>
+            <body></body>
+        </table>
+
+Within the <body>, we will use regular table rows <tr>.  Within the regular table rows, we will have table data <td>,
+that we will have data corresponding to the table headers created above.
+
+           <body>
+                <tr>
+                    <td>John</td>
+                    <td>55</td>
+                    <td>9997</td>
+                </tr>
+                <tr>
+                    <td>Sass</td>
+                    <td>59</td>
+                    <td>9993</td>
+                </tr>
+                <tr>
+                    <td>Rodman Vain Rachell</td>
+                    <td>58</td>
+                    <td>9998</td>
+                </tr>
+            </body>
+
+The next type of table is condensed.  These tables are not as spread out, as the simple table, are.  They are tightly
+spaced.  The only difference between the simple and condensed table, is that we use two classes of tables, when defining
+the type, just before the <head>and <body>, which remain the same.  The rows have less padding on them, so are more
+condensed:
+
+        <h2>Condensed table</h2>
+        <table class = 'table table-condensed'>
+
+This is also true, for the striped table; we uses two classes to define the type of table, before the <head> and <body>.
+The rows background lines are more distinguished, by coloring the background, light grey, of every other line, when
+using the striped class of table.
+
+        <h2>Striped Table</h2>
+        <table class = 'table table-striped'>
+
+All three class types of tables look good, when the window is re-sized.  There are more classes of table classes listed
+in the Bootstrap site.
+
+
+
+********************* Highlights from the comments area ***************************
+
+
+
+
+
+Btw, Intellij IDEA (and other IDE's from Jetbrains I assume) has built-in emmet support. Meaning that you can type "td"
+and then press TAB to create a set of matching "td"-tags. The entire structure for the first table Bucky created can be
+generated with "table.table>thead>tr>th*3^^tbody>(tr>td*3)*3" and then TAB. Just had to mention this when seeing Bucky's
+difficulties ;P
+
+On Point! I am using " table.table>(thead>tr>th*3)>tbody>tr*3>td*3 " then TAB. I am assuming "^^" is used to start a new
+ tag. I am not sure, can you comment on this? I am using emmet on Sublime Text 3.
+
+'^' moves up to the parent level. In this case '^^' means you move up two levels, first to a level with 'tr' as sibling
+and 'thead' as parent, then to a level with 'thead' as sibling and 'table' as parent.
+For further reference: http://docs.emmet.io/cheat-sheet/
+
+
+
+
+
+if you want to autocomplete tags, type a tag name without angle braces and hit Tab!Try it, it might work
+
+
+
+
+
+I thought it is a bad idea to use tables for layout and it is heavily discouraged?
+
+Yes. Using tables for layout is generally discouraged. However, using tables to represent data is what they're
+made for :)
+
+
+
+
+
+hey guys just to add on, there's a huge difference  between "<table class="table">" and "<table class="Table">" in this
+example we use the second piece of code of you use the first one you'll have an ugly looking web page
+
+You meant if you use the second piece of code you get an ugly looking page. The first piece of code works just fine
+
+
+
+
+
+Great tutorial!
+PS There is a nice shortcut for copying a line in phpstorm- Ctrl+d
