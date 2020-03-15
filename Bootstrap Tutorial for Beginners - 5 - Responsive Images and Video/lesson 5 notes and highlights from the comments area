@@ -1,0 +1,108 @@
+In this lesson we will looks at responsive and unresponsive images and the differences between the two. We will see how
+to embed responsive videos, without looking terrible on the website.  First we will look at some basic image classes.
+The first one is the 'image' class <img> tag, so put some images in a sub-directory we are working in.  We will first
+write the path, to the image then round the corners of an image using; class ='img-rounded' and give it a specific
+width and height:
+
+        <img src="https://s3.amazonaws.com/CFSV2/obituaries/photos/8283/670783/5d53182f7965b.jpg" class="img-rounded" width="230" height="230">
+        <img src="images/dad2.jpg" class="img-rounded" width="230" height="230">
+        <img src="images/dad.jpg" class="img-circle" width="230" height="230">
+
+A responsive class images width, is resizeable if the window is made smaller.  Unresponsive images, will not have a
+class assigned to it:
+
+        <!--using non-responsive no class, and responsive that will adjust if width is mad smaller-->
+        <img src="images/dad.jpg">
+        <img src="images/red.jpg" class="img-responsive">
+        <img src="images/band.jpg" class="img-responsive" width="230" height="230">
+
+Next we will make a video responsive.  Within another pair of <div> tags add the code to resize whatever we stick in it,
+in this case a video, and the dimensions are 16x9.  Within the <div> we will enter a youtube video, using <iframe> tags.
+When looking at a YouTube video, the usable address, of the video comes after the v=, playlist videos don't work,
+using this method.  Working example:
+
+SQLZG6yigQs
+
+in:
+
+https://www.youtube.com/watch?v=SQLZG6yigQs
+
+For the embedding, of a responsive video, with a standard size window 16x9, we use:
+
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/SQLZG6yigQs"></iframe>
+        </div>
+
+with url parameters, of the video you want within <iframe>.  Since this is responsive, it will take up most of the width
+of the screen, but condense down, when re-sized or on a cell phone or tablet.
+
+
+
+****************** highlights from the comments area ***********************
+
+
+
+
+
+bootstrap gives you a css stylesheet, so we cannot include our own style sheet ?
+
+You include Bootstrap's stylesheet first and yours after.
+
+
+
+
+
+can i have an id for a div, which already has a class attribute, for css purposes?
+
+Yes you can
+
+
+
+
+
+
+why do you have to include the "embed" in the youtube link? It does not work if I just post the direct video link. So
+if i have my own video on my harddrive, how do i make it responsive(without uploading it to youtube)?
+
+Just add video tags and put the src attribute to the video directory
+
+
+
+
+
+so how can you make an image be circle and responsive at once? How can you use both classes at once? Great tuts, mate.
+
+Hello, probably you already know it, but i was experimenting a bit and this one works:
+<img src="images/image.png" class="img-responsive img-circle"></img>
+
+
+
+
+
+how to re-size the image? I mean without re-sizing the whole browser?
+
+Set a CSS property called 'width-min' and 'width-max'.
+
+
+
+
+
+For video it's not working.
+why?
+
+Maybe you used a video from a playlist instead a regular youtube video.  The identifying portion of a playlist video has
+more characters than a regular videos suffix.  The playlist videos didn't work for me either, not sure why...
+
+
+
+
+
+In the newest version of Bootstrap, the classes should be:
+
+img class="rounded"
+img class="rounded-circle"
+img-responsive is now img-fluid
+
+
+
+

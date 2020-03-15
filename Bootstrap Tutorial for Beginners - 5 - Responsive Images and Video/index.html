@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>thenewboston</title>
+    <meta charset="utf-8">
+
+    <!-- L1 using downloaded bootstrap files instead of CDN-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+            <!---->
+    <!-- L05 images responsive and unresponsive, and embed videos-->
+    <div class="container">
+
+        <!--from local subdirectory or url rounded image corners and round image, and dimensions for facebook-->
+        <img src="https://s3.amazonaws.com/CFSV2/obituaries/photos/8283/670783/5d53182f7965b.jpg" class="img-rounded" width="230" height="230">
+        <img src="images/dad2.jpg" class="img-rounded" width="230" height="230">
+        <img src="images/dad.jpg" class="img-circle" width="230" height="230">
+        <br>
+
+        <!--using non-responsive no class, and responsive that will adjust if width is mad smaller-->
+        <img src="images/dad.jpg">
+        <img src="images/red.jpg" class="img-responsive">
+        <img src="images/band.jpg" class="img-responsive" width="230" height="230">
+
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/SQLZG6yigQs"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
