@@ -1,0 +1,122 @@
+In this lesson we will make the main navigation bar.  The navigation bar goes in the navbar class using the <nav>  tag,
+and not in the <div class="container"> as the previous tutorials, have completed.  Navbar it the navigation bar and
+navbar-default is the style.
+
+    <nav class="navbar navbar-default">
+
+Next we use container-fluid to make the container the navigation bar will exist within.  container-fluid will allow the
+navigation bar to span the entire width of the top of the page, which is the usual way of making a Navigation bar.
+
+        <!--container-fluid, defines the navigation bar will span the width-->
+        <div class="container-fluid"></div>
+
+Next we will ad a logo to the top Left hand site of the Navigation bar, using navbar-header.  This will let Bootstrap
+know there is going to be a logo header there, with a special style, and that its not going to be a button of any type,
+like the rest of the Navigation bar is comprised of.
+
+            <!--Add Logo to left side of Nav. bar-->
+            <div class="navbar-header"></div>
+
+Next we will make the logo linkable to another web address using <a> tag and navbar-brand:
+
+                <!--add link, navbar theme for the logo name-->
+                <a href='http://google.com' class="navbar-brand">The New Boston</a>
+
+The rest of the navigation menu items, will go in a <div> within an unordered list <ul>, using class="nav navbar-nav"
+for these type of menu items, that include clickable links.  Making the home page below, active, helps users know where
+they are, within the website:
+
+                <!--navigation bar classes, for the rest of the nav. bar items -->
+                <ul class="nav navbar-nav">
+
+                    <!--list items tag, make the item always selected by choosing active, and make a link, then the text -->
+                    <li class-="active"><a href="http://ebay.com">Homepage</a></li>
+
+                    <!--NOT active nav. bar items-->
+
+                    <li><a href="http://msn.com">About</a></li>
+                    <li><a href="http://yahoo.com">Contacts</a></li>
+
+
+
+
+************************ highlights from the comments area ************************
+
+
+
+
+
+The problem about this "active" class is that you must create a menu for every page of your site. You cannot just
+include the menu code, because "active" will be different. How could you automatically set this "active" class?
+
+You could use jquery to check the url first, and for example if the url is page.com/contact.html,
+then add class "active" to <a> with the href="contact.html". Here is a demo:
+https://css-tricks.com/snippets/jquery/add-active-navigation-class-based-on-url/
+
+
+
+
+
+if your output is not from left to right but from top to bottom with bullets, check your unordered list closing tags
+</ul>  , my editor automatically added it without me noticing and had that output before figuring out.
+
+
+
+
+
+This worked for me in Bootstrap 4, which solved the dropdown and alignment problems:
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+
+        <div class="container-fluid">
+            <!--Logo-->
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">THENEWBOSTON</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <!-- Menu Items-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Content</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+People having issues with Bucky's old tutorial, here's the code for Bootstrap 4:
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+
+   <!--Logo Here -->
+   <div class="navbar-header">
+    <a href="#" class="navbar-brand">Hello!</a>
+   </div>
+
+   <!--Menu Items -->
+   <div>
+    <ul class="navbar-nav">
+     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+   </div>
+
+  </div>
+ </nav>
