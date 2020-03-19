@@ -1,0 +1,142 @@
+In this lesson 7, we will add dropdown menus to the main navigation menu items, we created in lesson 6.  But first we
+will change the default style of the main navigation bar, from navbar-default (light grey) to navbar inverse (black).
+
+    <!--set up the navigation bar, navbar it the navigation bar and navbar-inverse instead of navbar-default, is the style-->
+    <nav class="navbar navbar-inverse">
+
+Next we will make the menu dropdown item, by adding another item to the list, with more menu items within it.  We will
+use the dropdown class to do this and an arrow pointing downwards, using the carot class within <span> tags, to make the
+icon, that indicates that it is a dropdown menu, next to the drop downs text; 'My Profile'.  We will also make a links
+that exist within the drop down menu.  To give this a dropdown characteristics instead of just a dead link, <a href=""
+we will change the drop down class to class="dropdown-toggle", followed by a class attribute data-toggle=, which we set
+to 'dropdown'.  So now when you click My Profile it doesn't function like a regular link, but instead it works as a
+dropdown:
+
+                    <li class='dropdown'>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">My Profile <span class="caret"></span></a>
+
+Next we will create the actual submenu items.  First we have to change the class to dropdown-menu so the program knows
+that it isn't just normal menu items, within an unordered list <ul>.
+
+                        <!--The sub menu items go in here-->
+                        <ul class='dropdown-menu'>
+
+                            <!--Not in this lesson; open in new window or tab, open email browser-->
+                            <li><a href="https://www8.hp.com/us/en/home.html" target="_blank">My website</a></li>
+                            <li><a href="mailto: abc@example.com">My email</a></li>
+                       </ul>
+                    </li>
+
+Next we will make an unordered list <ul> whose items will take up the right side of the navigation menu.  We will make a
+logout to click on.  We will also use a class with 3 elements within it.  NOTE: We tried using 2 elements and the Logout
+link was in an active state.  Also, NOT in the lesson, we added a help item:
+
+                <!--Right aligned navigation menu items-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Logout</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+
+
+
+
+
+********************* highlights from the comments area ********************
+
+
+
+
+
+I am wondering why Icant get the dropdown menu work...  I am using the template..
+
+@Jason Ng you have to include the jQuery, as well. Bootstrap's JavaScript needs it. I am not sure if it is included in
+the template.
+
+@Jason Ng Just attache this before closing the body element...
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
++Jason Ng Include JQuery before anything bootstrap related
+
++Marko Terzic: Regardless other commentaries your solution works just fine. Thanks
+
+@Efren Chavez It works, yes. But it is not good form. When you are including javascript file to be used throughout the
+whole page, you do it in the head section. If including a javascript file in that place will hinder whatever the site
+does, then and then ONLY you include within the body
+
++Yadu PIllai It's a good idea to place scripts at the bottom of the <body> element. This can improve page load, because
+HTML display is not blocked by scripts loading.
+
+
+@Yadu PIllai As Marko commented is a good practice place this kind of Java Script at the bottom, so your pages can be
+displayed faster. Anyway you can place such Java Scripts on the head of your HTML document, it's up to you.
+
+However the Script:
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+Don't be placed on production sites, as the Site Stack Overflow recommend (use the number version properly)
+
+@Efren Chavez How do we confirm that JQuery and JavaScript styles and changes the document before it loads? Many times,
+this occurs too late, albeit a fraction of a second because there isn't much content, but the delay is still noticeable.
+
+
+
+
+
+
+Anybody having problems try using jQuery 2.x !!!! Bootstrap won't work with jQuery 3.x
+
++Matt Corby Thank you. I reverted to an older version of jQuery and it worked. But I am far from impressed.
+We have to use an OLDER version of jQuery at times in order to get something working with Bootstrap? This completely
+defies the general requirement to keep up-to-date with latest versions!
+I'm really not enjoying using Bootstrap at the moment and with examples such as this, it seems like more hassle than
+it's worth! And the naming of nested classes is just awful! How the heck do developers remember it? Or is it pretty much
+standard practice to grab code snippets as required?
+I've gone from using pure HTML and CSS to trying to use the 'popular' Bootstrap to speed things up and I thought it was
+easy to learn and use, but it doesn't seem to be easy. :-(
+
+
+
+
+
+I noticed that in the below code, the dropdown works fine after eliminating class="dropdown" in 1st line and class="dropdown-toggle" in 2nd line. Only keeping data-toggle="dropdown" in 2nd line is enough, so whats the importance of other two classes?
+
+<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Friends</a></li>
+                            <li><a href="#">Photos</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+
+
+
+
+To those that the dropdown isn't working, try to put the 'class="dropdown-toggle" data-toggle="dropdown" '
+at the <a> tag instead of the <li> tag. the <li> should have the class="dropdown" though.
+
+
+
+
+
+
+dropdown not working @bucky
+
+Include the latest version of JQuery above your bootstrap.js:
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>thenewboston</title>
+    <meta charset="utf-8">
+
+    <!-- L1 using downloaded bootstrap files instead of CDN-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+
+    <!-- L07 set up the navigation bar, navbar it the navigation bar and navbar-inverse instead of navbar-default, is the style-->
+    <nav class="navbar navbar-inverse">
+
+        <!--container-fluid, defines the navigation bar will span the width-->
+        <div class="container-fluid">
+
+            <!--Add Logo to left side of Nav. bar-->
+            <div class="navbar-header">
+
+                <!--add link and logo name-->
+                <a href='http://google.com' class="navbar-brand">The New Boston</a>
+            </div>
+            <!--Menu Items-->
+            <div>
+
+                <!--navigation bar classes, for the rest of the nav. bar items -->
+                <ul class="nav navbar-nav">
+
+                    <!--list items tag, make the item always selected by choosing active, and make a link, then the text -->
+                    <li class="active"><a href="http://ebay.com">Homepage</a></li>
+
+                    <!--NOT active nav. bar items-->
+                    <li><a href="http://msn.com">About</a></li>
+                    <li><a href="http://yahoo.com">Contacts</a></li>
+
+                    <!--Drop down menu items-->
+                    <li class='dropdown'>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">My Profile <span class="caret"></span></a>
+
+                        <!--The sub menu items go in here-->
+                        <ul class='dropdown-menu'>
+
+                            <!--Not in this lesson; open in new window or tab, open email browser-->
+                            <li><a href="https://www8.hp.com/us/en/home.html" target="_blank">My website</a></li>
+                            <li><a href="mailto: abc@example.com">My email</a></li>
+                       </ul>
+                    </li>
+                </ul>
+
+                <!--Right aligned navigation menu items-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Logout</a></li>
+
+                    <!--NOT in this lesson and not recommended (looks unconventional)-->
+                    <li><a href="">Help</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>
