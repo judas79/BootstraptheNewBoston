@@ -1,0 +1,76 @@
+In this lesson we will continue adding to the navigation menu.  We will add a toggle button to give the functionality
+of the screen to resize properly for mobile devices.  As the navigation menu is now, it takes up 1/3 of the viewing
+portion of the window, when re-sized for a mobile device.  You would have to scroll down from the very bottom to see any
+of the content of the page. So we will make the button collapse or expand the navigation menu.  We will first use a <div>
+tag to give the menu items, the functionality to expand and collapse.  We also want to give the menu items bar area, an
+id:, so the toggle button to refer to it to expand or collapse, as an identifiable object.
+
+            <!--make the nav. bar collapsible using these classes and id-->
+            <div class="collapse navbar-collapse">
+
+We will put the code, for the nav bar button, below the navbar header and above the navbar logo. The button has 4
+different types of attributes we have to make:  type which is button, class which is toggle, data type which is what it's
+going to do; collapse something, and the target we are collapsing or expanding using the hash tag + id, for id of the
+target:
+
+                <!--toggle collapse or expand, 4 attributes, button-->
+                <button type='button' class="navbar-toggle" data-toggle="collapse" datatype="#mainNavBar"></button>
+
+Next we will make the option toggle button, that looks kind of like a hamburger (3 short horizontal lines), where the
+menu items will live, while the window is in a collapsed state.  We place this between, <button> HERE </button> in
+between <span> tags and use the icon-bar class.  We repeat the code 3 times, one for every horrizontal line, in the
+options logo:
+
+                    <!--the toggle collapse button, icon-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+
+
+
+
+****************** highlights from the comments area **********************
+
+
+
+You could have also used the built-in Glyphicons for the toggle instead of each line, specifically
+glyphicon glyphicon-menu-hamburger as the style for one span.
+
+
+
+
+
+
+There is a glyphicon for the hamburger icon:
+<span class=" glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="color:white"></span>
+
+
+
+
+
+My navbar isn't collapsing. I have copied the code exactly. Can you please post full code on forum please?
+
+Here's the full code from thenewboston:
+https://github.com/buckyroberts/Source-Code-from-Tutorials/tree/master/Bootstrap
+
+I did include. Turns out it was the wrong version :-(
+
+If you put boostrap script tag before ajax.googleapis tag,then it won't toggle.
+put jquery googleapis link before bootstrap script like this:
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+What if i want that collapse without shrinking the window size?
+How can i get that collapse button on desktop size?
+
+I found a way to put it on desktop size??
+Just do a button(with the 3 icon-bar styles) that has a dropdown like last video and then just navbar-right to it.
+
