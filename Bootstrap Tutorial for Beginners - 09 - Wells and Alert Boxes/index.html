@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>thenewboston</title>
+    <meta charset="utf-8">
+
+    <!-- L1 using downloaded bootstrap files instead of CDN-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<!---->
+    <!-- L08 set up the navigation bar size toggle-->
+    <nav class="navbar navbar-inverse">
+
+        <!--container-fluid, defines the navigation bar will span the width-->
+        <div class="container-fluid">
+
+            <!--Add Logo to left side of Nav. bar-->
+            <div class="navbar-header">
+
+                <!--toggle collapse or expand, 4 attributes, button-->
+                <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+
+                    <!--the toggle collapse button, icon-->
+                    <span class="icon-bar"></span>
+
+                    <!--NOT in this lesson: the toggle collapse button, icon-->
+                    <span class=" glyphicon glyphicon-music" aria-hidden="true" style="color:white"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <!-- NOT in this lesson: There is a glyth icon that will also do the same thing as 3 icon-bar class
+                    <span class=" glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="color:white"></span>-->
+                </button>
+
+                <!--add link and logo name-->
+                <a href='http://google.com' class="navbar-brand">The New Boston</a>
+            </div>
+            <!--Menu Items-->
+
+            <!--make the nav. bar collapsible using these classes-->
+            <div class="collapse navbar-collapse" id='mainNavBar'>
+
+                <!--navigation bar classes, for the rest of the nav. bar items -->
+                <ul class="nav navbar-nav">
+
+                    <!--list items tag, make the item always selected by choosing active, and make a link, then the text -->
+                    <li class="active"><a href="http://ebay.com">Homepage</a></li>
+
+                    <!--NOT active nav. bar items-->
+                    <li><a href="http://msn.com">About</a></li>
+                    <li><a href="http://yahoo.com">Contacts</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content-->
+    <!--L09 set up wells-->
+    <div class = 'container'>
+
+        <!-- well: bordered area with grey background-->
+        <h2>Well area</h2>
+
+        <!-- create a basic, small, or large well-->
+        <div class = "well">Basic Well</div>
+        <div class = "well well-sm">small Well</div>
+        <div class = "well well-lg">Large Well</div>
+
+        <!--alert wells with colored backgrounds-->
+        <div class = "alert alert-success">Congrats, you won</div>
+
+        <!--closable link, with alert box-->
+        <div class = "alert alert-danger">
+            <a href="#" class ='close' data-dismiss ='alert' aria-label="close">&times;</a>error</div>
+
+        <!--fade out closable link, with alert box-->
+        <div class = "alert alert-warning fade in">
+            <a href="#" class ='close' data-dismiss ='alert' aria-label="close">&times;</a>error</div>
+
+        <!--NOT in the lesson-->
+        <div class = "alert alert-warning fade in">
+            <span href="#" class ='close' data-dismiss ='alert' aria-label="close">&times;</span>error</div>
+
+    </div>
+</body>
+</html>

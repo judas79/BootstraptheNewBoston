@@ -1,0 +1,67 @@
+We will leave the navigation menu bar as is, and work on wells.  First we will set up our container for the main part
+of the website, within <div> tags:
+
+    <div class = 'container'>
+
+A well is kind of like a floating island that is, 'separate', with a border, and usually a grey background.  We will now
+add a heading for this section:
+
+        <!-- well: bordered area with grey background-->
+        <h2>Well area</h2>
+
+Now we will use the well class, within <div> tags to make a basic, small 'well well-sm', or large 'well well-lg' well:
+
+        <!-- create a basic, small, or large well-->
+        <div class = "well">Basic Well</div>
+        <div class = "well well-sm">Small Well</div>
+        <div class = "well well-lg">Large Well</div>
+
+There are well boxes that are used a lot, as alert boxes, when filling out forms online, to show completion in green, or
+errors in red, in the responses, submitted by the user.  Also 'alert' wells, are used for notifications, such as birthdays,
+appointments and such...  Alert boxes use the alert class, to make these specific colored, type of wells:
+
+        <!--alert wells with colored backgrounds-->
+        <div class = "alert alert-success">Congrats, you won</div>
+
+Most of these alert well boxes are made to popup and need a mechanism to close them.  We use a link, within link tags <a>
+with an actual link or a blank one, and the class 'close'. We will also need to dismiss the data and close the label,
+within the alert box using data-dismiss ='alert' and aria-label="close" to achieve closure of the popup.  To create the
+clickable close/ times for multiplication, 'X' we use   &times;   which will render html into a graphic, where we
+usually add the text between > IN HERE </a>
+
+        <!--closable link, with alert box-->
+        <div class = "alert alert-danger">
+            <a href="#" class ='close' data-dismiss ='alert' aria-label="close">&times;</a>error</div>
+
+To make a closable alert well, fade, instead of closing immediately, we add fade in after creating the alert button in
+the <div> tag area:
+
+            <div class = "alert alert-warning fade in">
+            <a href="#" class ='close' data-dismiss ='alert' aria-label="close">&times;</a>error</div>
+
+
+
+
+
+********************* highlights from the comments area *********************
+
+
+
+whoa.. fade out are actually called fade in on bootstrap..
+
+
+
+
+
+
+Replaced with <card> in Bootstrap 4.
+
+
+
+
+
+My question is, why we need to use the <a> element to contained the "x"?
+
+<span> tag works for me:
+<div class = "alert alert-warning fade in">
+            <span href="#" class ='close' data-dismiss ='alert' aria-label="close">&times;</span>error</div>
