@@ -1,0 +1,128 @@
+In this lesson we will make a collapsible, re-sizable sidebar, that will work on both mobile devices as well as full
+size computers.  To do this we will place the entire website content, the sidebar and main page, into a wrapper.  The
+wrapper will allow the user to toggle between viewing the full main page, or the sidebar and the main page, together.
+We will start with an empty main content area in the index.html and create a css document for the side bar named,
+sidebar.css.  We will link our index file to the css file, for bootstrap, so it can work, using a link at the bottom of
+the CDN paths for bootstrap:
+
+<link rel="stylesheet" href="sidebar.css">
+
+We will use the code tag <div> for our wrapper, and give it a name to hold its ID:
+
+We will set up the items in the sidebar to be static, since it will be collapsible.  We will enclose the static
+sidebar in a <div> tag and give it the id, sidebar-wrapper.
+
+    <div id ='sidebar-wrapper'>
+
+We will place our static sidebar items in an unordered list <ul>, in a class, sidebar-nav:
+
+        <div id ='sidebar-wrapper'>
+
+We will place the items in a list <li>, with a dummy link in the <a> tag:
+
+            <!--sidebar items and link in a list tag-->
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+
+Next we will make the page content, which has to be adaptable.  The sidebar, above, will dictate what you se here, or not.
+We will start off by making a <div> for the main page contents area.  We will give it an ID named page-content-wrapper:
+
+        <!--Main page contents area-->
+        <div id ='page-content-wrapper'>
+
+Next we have to bootstrap, the main page content, into a container, using class='container-fluid', in a <div> tag.
+'container-fluid' will allow the main contents to span the width of the window:
+
+            <!--bootstrap class container for main page-->
+            <div class="container-fluid">
+
+Inside the fluid container, we need to set up rows and columns, within <div> tags, using class row, and class
+column col-lg-12:
+
+               <!--set up rows and columns-->
+               <div class="row">
+                   <div class ='column col-lg-12'>
+
+At the top of these rows and columns we will make a button toggle, using a link, to make the sidebar appear or disappear.
+When we click the button, below, we will be changing the page and or sidebar layout:
+
+                        <!--create toggle button to control sidebar appear or disappear, and id-->
+                        <a href="#" class ='btn btn-success' id ='menu-toggle'>Toggle Menu</a>
+
+Next we will add a header <h2> and a paragraph <p> to se how it looks so far:
+
+                        <!--Header and paragraph-->
+                        <h3>Sidebars are Cool</h3>
+                        <p>'a bunch of text placed here'</p>
+
+Next we will add some jquery code, at the bottom of the index.html, to change classes, so it will go between toggled
+with sidebar or only the main page text.  We will put this between <script> tags and the language is jquery.  This
+will say: when the button is clicked do a switch.
+
+                        <!--more toggle script in jquery language-->
+                        <script>
+                            $('#menu-toggle').click(function(e) {
+
+                            });
+
+The link we used above, <a href="#" class ='btn btn-success' id ='menu-toggle'>Toggle Menu</a> to control the toggle
+switching, is handled as a link to url in bootstrap, but we want it to act as a toggle link.  We have to disable
+the default way the links action is handled. Prevent default event 'e', don't go to the link:
+
+                        e.preventDefault();
+
+This last part of the jquery script adds or removes the id, which is wrapper, causing the page to be toggled:
+
+                        $('wrapper').toggleClass('toggled');
+
+The whole jquery script:
+
+                        <script>
+                            $('#menu-toggle').click(function(e) {
+                                e.preventDefault();
+                                $('wrapper').toggleClass('toggled');
+                            });
+                        </script>
+
+We will move on to the sidebar.css file, in the next lesson.
+
+
+
+
+********************* highlights from the comments area ****************************
+
+
+
+
+Incase it doesn't work for you.
+Line 48 should be:
+$("#wrapper").toggleClass("menuDisplayed");
+In the video he has it as toogledClass("toggled");   but on his github page it's like the code I posted above.
+After this fix it worked for me.
+
+
+
+
+
+
+hi great video! quick question why did you use <a> instead of <span> for the button.
+
+<a> is an anchor tag, it links whatever is between its tags to the page written within it. In this case # is an empty.
+It makes it clickable but it wouldn't redirect you to anywhere.
+
+
+
+
+
+Hi Bucky! Your tutorials are awesome and you don't need class col-lg-12 when you want full width column (block elements
+like divs are full width by default).
+
+
+
+
+
+As always very good stuff, thank you for that. But, maybe it is time to use HTML5 tags for Bootstrap also. Thus, I use
+e.g. <aside class="col-md-5 col-lg-5"> or <section class="container-fluid">, <article class="panel panel-default"> for
+my layouts. Makes the code easier to read and complies with contemporary standards. Big ups.
+
