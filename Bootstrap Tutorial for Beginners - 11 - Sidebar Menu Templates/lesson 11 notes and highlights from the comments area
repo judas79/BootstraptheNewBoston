@@ -1,0 +1,252 @@
+First in this lesson we will change the  toggleClass from toggled to menuDisplayed for the sake of clarity, of what the
+action does, when clicked.
+
+            $('#wrapper').toggleClass('menuDisplayed');
+
+In the sidebar.css file we will add the the sidebar wrapper, which essentially is the entire sidebar.  We will use this
+to style, the colors, hover over and other styling options, the items in the sidebar.  This will be in the CSS type
+language:
+
+/*sidebar wrapper*/
+#sidebar-wrapper{
+
+}
+
+In the CSS language, we will set index-z to 1 and the position to absolute, which means align the sidebar to the top
+left, at position 1, top left.  Fom google:  'An element with position: absolute; is positioned relative to the nearest
+positioned ancestor (instead of positioned relative to the viewport, like fixed).' :
+
+    /*set z index to 1 and position to top left*/
+    z-index: 1;
+    position: absolute;
+
+When we do the main page window layout, it will also be starting on the top left, overlapping each other.
+
+By default the sidebar will not display, so we will set the width to 0, but we want the height to span the window, when
+the sidebar is shown, so we set the height to %90 to create a footer; space at the bottom.  When we toggle the sidebar,
+we will give it a width of about 250% so it will be visible:
+
+  /*width is 0 default not shown, height full span for when sidebar is shown*/
+    width: 0;
+    height: 90%;
+
+If there is an overload of text, in the window, we will give the sidebar the attribute to cut of a portion of what is
+visible in the sidebar, using overflow, to regulate the right to left sidebar content:
+
+    /*collapse sidebar if there is too many items being displayed, width wise*/
+    overflow-y: hidden;
+
+The background color, dark blue with a red border, with some transparency.  Always include 'solid' before the color when
+working with borders in CSS:
+
+    background: #2C3E50;
+    border: 2px solid red;
+    opacity: 0.9;
+
+So far we have created the side bar, but with a width of 0 it is not displayed.
+
+Next, we will make the main content area using, page-content-wrapper, that sits to the left of the sidebar, when the
+sidebar is visible or takes up the entire width, when the sidebar has been toggled to be out of site.  We will set this
+area, to take up the entire width of the screen, as its default setting.
+
+#page-content-wrapper{
+    width: 100%;
+    position: absolute;
+
+We will give the headings some padding, to space them out, and not have them run into each other.  We will also give it
+a green border.  For borders always include 'solid'before the color:
+
+    padding: 15px;
+    border: 5px solid green;
+
+So far the main content window will display as the full width, when the page is opened up and the sidebar will not be
+visible.  If we displayed the sidebar now it would overlap the main content area and look a mess.  To remedy that we
+will change the width of the sidebar, so it will display.  We do this by changing the style of the wrapper on the
+toggleClass;  menuDisplayed.  For the sidebar wrapper, we will change the width of 0 , to a width of 250 pixels so it
+will popout and become visible.  The rest of the styling will be the default, set above in the sidebar wrapper:
+
+#wrapper.menuDisplayed #sidebar-wrapper{
+    width: 250px;
+}
+
+As it is right now the sidebar will overlap across the content to the Main context page area.  So to fix that we must,
+reset the main page content area to start 250 pixels to the right, on the left side of the window, when the sidebar is
+clicked to display it.  We will use padding to take up the 250 pixel area.  We also could us margin-left to achieve the
+same goal if padding-left doesn't look right:
+
+#wrapper.menuDisplayed #page-content-wrapper{
+    padding-left: 250px;
+}
+
+Next we will do the sidebar styling, using CSS, without using bootstrap.  Working within Sidebar-nav, which is our main
+menu within the, sidebar, is where we will add our styling.  First we will set the padding to 0 and the list-style to
+none.  Since the sidebar is in an unordered lis, this will stop it from having bulleted points inserted in to it, by
+the program :
+
+.sidebar-nav{
+    padding: 0;
+    list-style: none;
+}
+
+Next we will work on the list items, the items that are clickable in the side bar, to give them the style we want.  We
+will start the text away from the left hand side and also, give the text items, some room from each other, so the look
+more like headings, and are not jumbled together on top of each other.
+
+/*Give our list items some space from the left side and space between the items*/
+.sidebar-nav li{
+    text-indent: 30px;
+    line-height: 50px;
+}
+
+We will make the text, which are links, within the side bar, not format like a paragraph, or be underline, and be
+colored, light grey:
+
+/*stack the links on top of another, as not to look like a paragraph,
+no decorative underlining of the link, color light grey*/
+.sidebar-nav li a{
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+
+Next we will give the text links in the sidebar a hover over quality of,a turquoise background when being
+hovered over.  The background spans the width of the sidebars width:
+
+/*When hovering over text link, make background turquoise behind the text*/
+.sidebar-nav li a:hover{
+    background: #16A085;
+}
+
+I have changed some of the colors and opaqueness from what is above, in the sidebar.css, but all the code is the same.
+
+
+
+
+******************** highlights from the comments area ***********************
+
+
+
+
+Also, if you wanted a navbar like on your thenewboston website, would you place it in the page-content-wrapper?
+
+No, place it outside #wrapper
+
+I simply just left my navbar where it was and minimized it in pycharm, and started my sidebar code underneath it:
+
+
+   <!-- L08 set up the navigation bar size toggle-->
+    <nav class="navbar navbar-inverse">
+
+     ***** THIS WHOLE AREA IS MINIMIZED ******
+    </nav>
+
+    <!-- Main content-->
+    <!--L10 set up wrapper main<div>, id = wrapper, and side bar and main content area-->
+    <div id = 'wrapper'>
+
+        <!--sidebar-->
+
+
+
+
+
+
+how to add footer to entire page,without sidebar overlapping footer.
+
+#sidebar-wrapper{
+     height: 95%
+}
+
+(Assuming footer occupies 5%, tweak height according to height of footer)
+
+
+
+
+
+hey hi even for me also when i click the button nothing is happening.I dunno where i did mistake? Please could you
+help me
+
+add the jquery
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> file
+
+Look at the site on chrome, first of all. Internet Explorer may have issues if you are using it.
+
+
+
+
+
+What you did is place on the left, how can I put the side bar on the right? Thanks :)
+
+In the css file:
+1) To make the sidebar go to the right:
+on #sidebar-wrapper you should add
+right: 0
+
+2) To adjust padding of the main content:
+  a) on #page-content-wrapper
+  change padding-left to padding-right
+  b) On #wrapper.toggled #page-content-wrapper
+  change padding-left to padding-right
+
+
+
+
+
+How can the toggle animation smoother? i.e it slides out rather than just popping out
+
+add (without quotes) " transition: .5s ease-out; " to #sidebar-wrapper and #page-content-wrapper
+
+
+
+
+
+If it's not displaying, make sure the <script> tag for jQuery is BEFORE the script for toggling the sidebar.
+
+Hi, when the page has a lot of content, when you scroll down the menu background doesn't go to the end. How can we fix
+that? Thank you, great tutorial!
+
+Hey, do you find any solution about it, I am in same problem now.
+
+Make sure you put height: 100% in sidebar-wrapper styling
+
+
+
+
+
+instead of padding-left:250px; why don't you replace padding-left with margin-left because padding-left overlays over
+the toggled division.. it makes more sense
+
+
+
+
+
+It didn't work for me at first, but when I removed #wrapper from the two  below, it worked perfectly.I don't know the
+reason.could someone explain it for me.thnx
+
+#wrapper.menuDisplayed #sidebar-wrapper{
+ width: 250px;
+}
+
+#wrapper.menuDisplayed #page-content-wrapper{
+ padding-left: 250px;
+}
+
+So if you replace the #wrapper.menuDisplayed with just '.toggled' then that actually works as well, no idea what happens
+here but that's a better workaround.
+
+
+
+
+
+height: 100vh ; it's much better then 100%
+
+
+
+
+
+you are just great at giving tutorials man, straight to the point and easy to understand. By the way, is there any way
+to have the menu already open by default? thank you!
+
+You probably already figured it out, but simply giving the main wrapper the menuDisplayed class does the trick.
+They jQuery part simply toggles it: it adds the class if it's absent, and removes it otherwise. It's all that happens
+when you click the button, so you just change the starting value and the CSS will act accordingly.
+

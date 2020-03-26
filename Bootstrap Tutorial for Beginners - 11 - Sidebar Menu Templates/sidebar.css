@@ -1,0 +1,66 @@
+/*sidebar wrapper*/
+#sidebar-wrapper{
+
+    /*set z index to 1, and position to top left*/
+    z-index: 1;
+    position: absolute;
+
+    /*width is 0 default not shown, height full span for when sidebar is shown*/
+    width: 0;
+    height: 90%;
+
+    /*partially collapse sidebar, as necessary, if there is too many items being displayed, width wise*/
+    overflow-y: hidden;
+
+    /*background color dark blue with a red border, with some transparency*/
+    background: #2C3E50;
+    border: 2px solid blue;
+    opacity: 0.97;
+}
+
+/*main content area*/
+#page-content-wrapper{
+    width: 100%;
+    position: absolute;
+
+    /*padding to keep headings from running into each other and border green*/
+    padding: 15px;
+    border: 5px solid #2C3E50;
+}
+
+/*change the width of the sidebar to display it, and start the page contents area 250 pixels to the right*/
+#wrapper.menuDisplayed #sidebar-wrapper {
+    width: 250px;
+}
+
+/*we can also use margin-left, instead of padding-left.*/
+#wrapper.menuDisplayed #page-content-wrapper{
+    padding-left: 250px;
+}
+
+/*sidebar styling*/
+.sidebar-nav{
+    /*turn off default styling which would add bullet points to our list items*/
+    padding: 0;
+    list-style: none;
+}
+
+/*Give our list items some space from the left side and space between the items*/
+.sidebar-nav li{
+    text-indent: 30px;
+    line-height: 50px;
+}
+
+/*stack the links on top of another, as not to look like a paragraph,
+no decorative underlining of the link, color light grey*/
+.sidebar-nav li a{
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+}
+
+/*When hovering over text link, make background turquoise behind the text*/
+.sidebar-nav li a:hover{
+    background: #16A085;
+}
+

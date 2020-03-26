@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>thenewboston</title>
+    <meta charset="utf-8">
+
+    <!-- L10 using downloaded bootstrap files instead of CDN-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+
+
+    <!-- L08 set up the navigation bar size toggle-->
+    <nav class="navbar navbar-inverse">
+
+        <!--container-fluid, defines the navigation bar will span the width-->
+        <div class="container-fluid">
+
+            <!--Add Logo to left side of Nav. bar-->
+            <div class="navbar-header">
+
+                <!--toggle collapse or expand, 4 attributes, button-->
+                <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+
+                    <!--the toggle collapse button, icon-->
+                    <span class="icon-bar"></span>
+
+                    <!--NOT in this lesson: the toggle collapse button, icon-->
+                    <span class=" glyphicon glyphicon-music" aria-hidden="true" style="color:white"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <!-- NOT in this lesson: There is a glyth icon that will also do the same thing as 3 icon-bar class
+                    <span class=" glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="color:white"></span>-->
+                </button>
+
+                <!--add link and logo name-->
+                <a href='http://google.com' class="navbar-brand">The New Boston</a>
+            </div>
+            <!--Menu Items-->
+
+            <!--make the nav. bar collapsible using these classes-->
+            <div class="collapse navbar-collapse" id='mainNavBar'>
+
+                <!--navigation bar classes, for the rest of the nav. bar items -->
+                <ul class="nav navbar-nav">
+
+                    <!--list items tag, make the item always selected by choosing active, and make a link, then the text -->
+                    <li class="active"><a href="http://ebay.com">Homepage</a></li>
+
+                    <!--NOT active nav. bar items-->
+                    <li><a href="http://msn.com">About</a></li>
+                    <li><a href="http://yahoo.com">Contacts</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content-->
+    <!--L10 set up wrapper main<div>, id = wrapper, and side bar and main content area-->
+    <div id = 'wrapper'>
+
+        <!--sidebar-->
+        <div id ='sidebar-wrapper'>
+
+            <!--unordered list to hold sidebar items-->
+            <ul class ='sidebar-nav'>
+
+                <!--sidebar items and link in a list tag-->
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+
+            </ul>
+
+        </div>
+
+        <!--Main page contents area-->
+
+        <!--id for main page-->
+        <div id ='page-content-wrapper'>
+<!---->
+            <!--bootstrap class container-fluid for full width main page-->
+            <div class="container-fluid">
+
+                <!--set up rows and columns-->
+                <div class="row">
+                    <div class ='column col-lg-12'>
+
+                        <!--create toggle button to control sidebar appear or disappear, and id-->
+                        <a href="#" class ='btn btn-success' id ='menu-toggle'>Toggle Menu</a>
+
+                        <!--Header and paragraph-->
+                        <h3>Sidebars are Cool</h3>
+                        <p>
+                            People may be sick with the virus for 1 to 14 days before developing symptoms. The most common
+                            symptoms of coronavirus disease (COVID-19) are fever, tiredness, and dry cough. Most people
+                            (about 80%) recover from the disease without needing special treatment.
+                            More rarely, the disease can be serious and even fatal. Older people, and people with other
+                            medical conditions (such as asthma, diabetes, or heart disease), may be more vulnerable to
+                            becoming severely ill.
+                            People may experience:
+                            cough
+                            fever
+                            tiredness
+                            difficulty breathing (severe cases)
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--more toggle script in jquery language-->
+    <script>
+        $('#menu-toggle').click(function(e) {
+            e.preventDefault();
+            $('#wrapper').toggleClass('menuDisplayed');
+        });
+    </script>
+
+</body>
+</html>
