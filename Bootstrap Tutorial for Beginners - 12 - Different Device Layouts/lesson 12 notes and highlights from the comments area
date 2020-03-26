@@ -1,0 +1,102 @@
+In this lesson we will learn how to make different layouts, for different types of devices, by example.  The first
+example will be for a social networking app for a phone.  We would like each post to take up the entire width of the
+screen.
+On a computer, if a post took up the entire width of the screen, it would look goofy.  So we will make the text
+take up the whole width, on a phone and half the width on a computer.  To work with text and most layouts, in bootstrap,
+that we want to be responsive, will be using rows and columns.  We will make up the rows with many columns in a <div>
+tag, using the row class and two classes of columns using col and the extra small for phones and medium size for the
+desktops.  Half the columns will be used for each type so we will divide the columns by 2.  Remember, there are 12
+column divisions possible, so that is 6 each:
+
+ <div class="container-fluid">
+
+                <!--L12 phone and desk top settings-->
+                <h3>Phone entire width, desktop 1/2 width</h3>
+
+                <!--create rows and columns, so the screen is responsive to small or medium size-->
+                <div class="row">
+                    <!--12 is for full, and 6 is for half, screen-->
+                    <div class="col col-xs-12 col-md-6" style="background: lightblue;">Phone entire width, desktop 1/2 width</div>
+                    <div class="col col-xs-12 col-md-6" style="background: #5be694;">Phone entire width, desktop 1/2 width</div>
+                    <div class="col col-xs-12 col-md-6" style="background: #b3a5e6;">Phone entire width, desktop 1/2 width</div>
+                </div>
+
+We will play with this and make it half for the phone xs-6, and One third for the desktop md-4:
+
+                <!--create rows and columns, so the screen is responsive to small or medium size-->
+                <div class="row">
+                    <!--6 is for half, and 4 is for 1/3, screen-->
+                    <div class="col col-xs-6 col-md-4" style="background: lightblue;">Phone entire width, desktop 1/3 width</div>
+                    <div class="col col-xs-6 col-md-4" style="background: #5be694;">Phone entire width, desktop 1/3 width</div>
+                    <div class="col col-xs-6 col-md-4" style="background: #b3a5e6;">Phone entire width, desktop 1/3 width</div>
+
+                </div>
+
+These screen divisions be used to organize your data into the areas you want them to be in, based on there content make
+up.  Things like an area for the menu, the names, then more information about those names, could be kept separate and
+organized, by division of the columns.
+
+Next we will learn how to offset columns; kind of like adding a tab or indentation to be more aesthetically pleasing to
+the user.  To offset the column from the side we use, class col-md-offset-'any number 1-12' along with the class that
+defines the columns width, in a <div> tag.  The column offset will start 1/12 of a column in, and take up 1/3 of the
+remaining width.  So we've used 1 column offset then 4 columns, for the 1/3 of the total space (12columns) and so have
+7 columns left to work with, in that row:
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-1" style="background: #b3a5e6;">Off-set of 1 (lowest offset)</div>
+                </div>
+
+Next we will nest rows.  A nest, in this example, would be a layout within a layout.  For example if the site needed a
+way to put a reply post, inside another post, and also have it be responsive.
+
+                <h3>Nesting Rows</h3>
+
+                <div class="row">
+
+                    <!--3/4 of the screen column-->
+                    <div class="col-md-9">
+
+                        Hey I went to mars today
+
+                        <!--beginning of the Nested Row-->
+                        <div class="row">
+                            <div class="col-md-6"></div>
+
+Even though we took up 3/4 of the line up with, "col-md-9", the nested code will be read as a new full line, because
+we use a new <div> tag to create it, nested inside, so it has 12 column divisions, but its 12 column divisions within
+the 9 division system of the parent it is nested in.
+
+                    <!--3/4 of the screen column-->
+                    <div class="col-md-9" style="background: #e67ac5; padding: 20px;">
+
+                        Hey I went to mars today
+
+                        <!--beginning of the Nested Row-->
+                        <div class="row">
+                            <div class="col-md-6" style="background: #e6a0e3;">child 1</div>
+                            <div class="col-md-6" style="background: #c9a8e6;">child 2</div>
+
+                        </div>
+                    </div>
+
+We can also nest the columns, so that each post, is on its own row:
+
+                <!--Nesting, each row has its own line-->
+                <h3>each row has its own line</h3>
+
+                <div class="row">
+ 
+                    <!--3/4 of the screen column-->
+                    <div class="col-md-9" style="background: #e67ac5; padding: 20px;">
+
+                        Hey I went to Venus today
+
+                        <!--beginning of the Nested Row-->
+                        <div class="row">
+                            <div class="col-md-6" style="background: #e67b75;">moon 1</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6" style="background: #e68585;">moon 2</div>
+                    </div>
+                </div>

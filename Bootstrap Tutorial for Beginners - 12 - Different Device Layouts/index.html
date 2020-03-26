@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>thenewboston</title>
+    <meta charset="utf-8">
+
+    <!-- L10 using downloaded bootstrap files instead of CDN-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+
+
+    <!-- L08 set up the navigation bar size toggle-->
+    <nav class="navbar navbar-inverse">
+
+        <!--container-fluid, defines the navigation bar will span the width-->
+        <div class="container-fluid">
+
+            <!--Add Logo to left side of Nav. bar-->
+            <div class="navbar-header">
+
+                <!--toggle collapse or expand, 4 attributes, button-->
+                <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+
+                    <!--the toggle collapse button, icon-->
+                    <span class="icon-bar"></span>
+
+                    <!--NOT in this lesson: the toggle collapse button, icon-->
+                    <span class=" glyphicon glyphicon-music" aria-hidden="true" style="color:white"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <!-- NOT in this lesson: There is a glyth icon that will also do the same thing as 3 icon-bar class
+                    <span class=" glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="color:white"></span>-->
+                </button>
+
+                <!--add link and logo name-->
+                <a href='http://google.com' class="navbar-brand">The New Boston</a>
+            </div>
+            <!--Menu Items-->
+
+            <!--make the nav. bar collapsible using these classes-->
+            <div class="collapse navbar-collapse" id='mainNavBar'>
+
+                <!--navigation bar classes, for the rest of the nav. bar items -->
+                <ul class="nav navbar-nav">
+
+                    <!--list items tag, make the item always selected by choosing active, and make a link, then the text -->
+                    <li class="active"><a href="http://ebay.com">Homepage</a></li>
+
+                    <!--NOT active nav. bar items-->
+                    <li><a href="http://msn.com">About</a></li>
+                    <li><a href="http://yahoo.com">Contacts</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content-->
+    <!--L10 set up wrapper main<div>, id = wrapper, and side bar and main content area-->
+    <div id = 'wrapper'>
+
+        <!--sidebar-->
+        <div id ='sidebar-wrapper'>
+
+            <!--unordered list to hold sidebar items-->
+            <ul class ='sidebar-nav'>
+
+                <!--sidebar items and link in a list tag-->
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+
+            </ul>
+
+        </div>
+
+        <!--Main page contents area-->
+
+        <!--id for main page-->
+        <div id ='page-content-wrapper'>
+
+            <!--bootstrap class container-fluid for full width main page-->
+            <div class="container-fluid">
+
+                <!--L12 phone and desk top settings-->
+                <h3>Phone entire width, desktop 1/2 width</h3>
+
+                <!--create rows and columns, so the screen is responsive to small or medium size-->
+                <div class="row">
+                    <!--12 is for full, and 6 is for half, screen-->
+                    <div class="col col-xs-12 col-md-6" style="background: lightblue;">Phone entire width, desktop 1/2 width</div>
+                    <div class="col col-xs-12 col-md-6" style="background: #5be694;">Phone entire width, desktop 1/2 width</div>
+                    <div class="col col-xs-12 col-md-6" style="background: #b3a5e6;">Phone entire width, desktop 1/2 width</div>
+                </div>
+
+                    <h3>Phone entire width, desktop 1/3 width</h3>
+
+                <!--create rows and columns, so the screen is responsive to small or medium size-->
+                <div class="row">
+                    <!--6 is for half, and 4 is for 1/3, screen-->
+                    <div class="col col-xs-6 col-md-4" style="background: lightblue;">Phone entire width, desktop 1/3 width</div>
+                    <div class="col col-xs-6 col-md-4" style="background: #5be694;">Phone entire width, desktop 1/3 width</div>
+                    <div class="col col-xs-6 col-md-4" style="background: #b3a5e6;">Phone entire width, desktop 1/3 width</div>
+                </div>
+
+                <h3>off-setting columns</h3>
+
+                <div class="row">
+                    <div class="col-md-4" style="background: #b3a5e6;">One Third</div>
+                </div>
+
+                <!--The column offset class-->
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-1" style="background: #b3a5e6;">Off-set of 1 (lowest offset)</div>
+                </div>
+
+                <!--Nesting Rows-->
+                <h3>Nesting Rows</h3>
+
+                <div class="row">
+
+                    <!--3/4 of the screen column-->
+                    <div class="col-md-9" style="background: #e67ac5; padding: 20px;">
+
+                        Hey I went to mars today
+
+                        <!--beginning of the Nested Row-->
+                        <div class="row">
+                            <div class="col-md-6" style="background: #1c2ee6;">child 1</div>
+                            <div class="col-md-6" style="background: #e61526;">child 2</div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Nesting, each row has its own line-->
+                <h3>each row has its own line</h3>
+
+                <div class="row">
+
+                    <!--3/4 of the screen column-->
+                    <div class="col-md-9" style="background: #e67ac5; padding: 20px;">
+
+                        Hey I went to Venus today
+
+                        <!--beginning of the Nested Row-->
+                        <div class="row">
+                            <div class="col-md-6" style="background: #e4e61a;">moon 1</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" style="background: #22e636;">moon 2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--NOT IN THE LESSON Nesting, each offset row has its own line-->
+                <h3>each offset row has its own line</h3>
+
+                <div class="row">
+
+                    <!--3/4 of the screen column-->
+                    <div class="col-md-9" style="background: #e67ac5; padding: 20px;">
+
+                        Hey I went to Uranus today
+
+                        <!--beginning of the Nested Row-->
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-1" style="background: #e2e637;">moon 1</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-3" style="background: #1be659;">moon 2</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-5" style="background: #2d36e6;">moon 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
