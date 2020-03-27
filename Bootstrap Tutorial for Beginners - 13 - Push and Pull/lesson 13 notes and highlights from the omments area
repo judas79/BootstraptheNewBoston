@@ -1,0 +1,69 @@
+In this lesson, push and pull, we will learn how to change the order of the columns, dependant on which device we are
+using.  Sometimes its better to have the columns appear in a different order on a desktop than on a cell phone.  We will
+first make 3 columns:
+
+                <div class="container-fluid">
+
+                <!--L13 push and pull-->
+                <h1>Lesson 13 Push and Pull</h1>
+                <div class="row">
+                    <div class="col-md-6" style="background: #e61529">Main Column A for Homepage</div>
+                    <div class="col-md-3" style="background: #17e65e">Column B</div>
+                    <div class="col-md-3" style="background: #1c2ee6">Column C</div>
+                </div>
+
+If you want to have column A at the top for a desktop, and column A in the middle, for a cell phone; this is where the
+push and pull classes come in.  We will do this by adding a condition, col-md-push-5 to the class.  Push moves the
+column the amount push-(here), to the right.  We will do that for column A.  Since we pushed column A 5, we will have to
+pull column B Left, so they will trade positions.  Pull will move column B, the amount specified, to the left.  The
+numerical amount, of the push or pull, is determine by the column your are replacing, numerical setting.  Since we used
+md (desktop sized) for the push and pull; that is screen size in which the columns are switched.  When the window is
+depreciated to the size of a phone, the columns will align to their default order, because the push and pull arguments
+will be ignored:
+
+                <h2>push pull columns</h2>
+
+                <div class="row">
+                    <div class="col-md-6 col-md-push-3" style="background: #e61529">Main Column A for Homepage</div>
+                    <div class="col-md-3 col-md-pull-6" style="background: #17e65e">Column B</div>
+                    <div class="col-md-3" style="background: #1c2ee6">Column C</div>
+
+                </div>
+
+********************** NOT IN THE LESSON *************************
+
+We will try using extra small es, instead of medium md.  This switched the columns, as before,
+column A with column B at medium size.  When the window was depreciated, the columns resumed there A, B orientation, but
+all three columns where on 1 line instead of on 3 lines:
+
+                <h2>push pull extra small for cell phones columns</h2>
+
+                <div class="row">
+                    <div class="col-xs-6 col-md-push-3" style="background: #e61529">Main Column A for Homepage</div>
+                    <div class="col-xs-3 col-md-pull-6" style="background: #17e65e">Column B</div>
+                    <div class="col-xs-3" style="background: #1c2ee6">Column C</div>
+
+                </div>
+
+
+
+
+
+
+
+**************************** highlights from the comments area *****************************
+
+
+
+
+It doesnt follow those rules you mentioned at 3:57 ! It they were followed then the divs would've been 5 column wide in
+mobile view also which isn't the case here.. It will take the whole width by default.
+
+mobiles are SMALLER than md , therefore md conditions wont apply. Remember, bootstrap is "mobile first"
+
+
+
+
+
+BE AWARE!
+The push pull class are now order-* (using flexbox) in Bootstrap 4.
