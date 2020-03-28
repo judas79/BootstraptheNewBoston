@@ -1,0 +1,92 @@
+In this tutorial we will make a popup window, referred to as a modal in bootstrap not javascript whatsoever.  So we will
+have a page with a button that pops up a message, logon, or whatever we want it to do.  Using the <button> tagt The
+buttons' type is button (what it is), and class= 'btn btn-success' is so that it looks like a button and -success makes
+it green.  We will also add the attribute data-toggle:modal, which is saying, we are toggling on a modal
+(use it to open popup window).  Also we will need to add a data-target, so the program will know which modal to open.
+Since we are using and id, the hash sign #, will be used, prior to the targets id name:
+
+                <h1>Lesson 14 Login Modal</h1>
+                <h3>Log In Demo</h3>
+
+                <!--Create the object use as, button, color, looks like a button and green (success),
+                 used to toggle modal, this modals id is:, and button text is open Log... hash popupWindow-->
+                <button type='button' class="btn btn-success" data-toggle="modal" data-target="#popupWindow">Open Log In Window</button>
+
+Next we will make the actual modal (popup).  We do the in between <div> tags, with attributes nested within another set of
+<div> tags.  First add the attribute so it fades out slowly then the models id;  popupWindow.  Notice there is no hyphen
+between modal and fade!    Next we set the dialog, which is yet another name interchangeable, with model and popup.  The
+dialog will be, the next nested content(could be a login, message or a form, anything), using <div> tags.
+
+                <!--create modal (popup window) which fades, id name is popupWindow and
+                nested has modal-dialog to display message,-->
+                <div class="modal fade" id="popupWindow">
+                    <div class="modal-dialog">
+
+In the modal-dialog we will nest a class, modal-content, that will allow our popup to have a head, body and a footer.
+This will allow us to organize out content in sections, in stead of one big blob.  We will use three classes, within
+<div> tags:  modal-header, modal-body and modal-footer.  In the header, we will put a button to close the popup.  It will
+use the button class that will close all the data in the modal(popup) when the X is clicked.  We use '&times' to generate
+the X, to click.  We will also add a modal title header within <h3> tags, to display "Log In":
+
+                            <!--Header (close button, its a button, that closes the modal by clicking X(&times)-->
+                            <div class="modal-header"></div>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3 class="modal-title">Log In</h3>
+
+Next we will work on the body.  We will make a simple form within the <form> tag, with a 'role' of form.  The purpose of
+the HTML role attribute is to identify to parsing software the exact function of an element (and its children) as part
+of a web application.  Then add the form elements in <div> tags, which will consist of a couple of form groups, to
+handle the code for the email and password, portions of the form.  Under the 'form groups' we will put in all the single
+elements needed for the form, such as:  text area, input field, check box or radio buttons groups, so bootstrap will
+know how to handle it.  So in the <input> tag we will add, email type, class="form-control", and a placeholder so it
+will say 'email' greyed out, in the entry box so the user will know where to enter their email.  The email text could
+also have been added to the left of the box, using a label, but we omitted that...
+
+                            <!--body (log in form)-->
+                            <div class="modal-body"></div>
+                                <form role="form">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="email">
+                                    </div>
+
+We will do something similar, to handle the password entry.  Bootstrap will handle the masking of the password entry,
+because of the type being password, with asterisks '*' or dots'.':
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="password">
+                                    </div>
+
+Last, we will make the buttons to log the email and password, in the modal footer area.  It will be a block button,
+meaning it spans the form area, like a block, instead of a small button, and also be the primary button, which means that
+its color is blue.
+
+                            <!--footer (submit button)-->
+                            <div class="modal-footer"></div>
+                                <button class="btn btn-primary btn-block">Log In</button>
+
+
+
+
+
+***************************** Highlights from the comments area ********************************
+
+
+
+
+How the hell do u remember those many class names??
+
+These classes are all named to what they are, it is logical thinking
+
+Not sure but i think you can find most of them on the bootstrap website :)
+
+its all available on bootstrap website. you will get used to it not that difficult to remember since its self explanatory
+
+
+
+
+
+
+Please could you make a video that takes this login and make it works so when some one puts the username and password it
+then it opens up a admin type of page
+
+Just put the login button into a form in the modal-body class.
